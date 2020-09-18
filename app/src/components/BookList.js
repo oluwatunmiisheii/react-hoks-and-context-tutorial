@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ThemeContext } from './../context/ThemeContext';
 
 class BookList extends Component {
+  // static context type can only be used in stateful components only
   static contextType = ThemeContext
   render() {
     const { isLightTheme, light, dark } = this.context;
