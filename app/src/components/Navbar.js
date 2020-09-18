@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { ThemeContext } from './../context/ThemeContext';
 
-// using consumer to access context
+// 1. using consumer to access context, 
+//  2. this works in functional component also
+//  3. this method is useful when making use of more than one context
 class Navbar extends Component {
   render() {
-    console.log(this.context);
     return (
       <ThemeContext.Consumer>{(context) => {
         const { isLightTheme, light, dark } = context;
