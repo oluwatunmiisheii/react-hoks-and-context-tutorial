@@ -1,2 +1,2 @@
-# react-hooks-and-context-tutorial
-React Hooks and Context Api tutorial by Net Ninja
+# react-hooks-and-context-starter-code
+React Hooks and Context Api starter code
