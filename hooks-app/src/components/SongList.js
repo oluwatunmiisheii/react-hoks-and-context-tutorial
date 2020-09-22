@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getKey } from './../util/getKey';
+import NewSongForm from './NewSongForm';
 
 const SongList = () => {
   const initState = [
@@ -7,8 +8,8 @@ const SongList = () => {
     { title: 'memory gospel', id: getKey() },
     { title: 'the wild wilderness', id: getKey() }
   ]
-  const addSongHandler = () => {
-    setSongs([...songs, { title: 'new song', id: getKey() }])
+  const addSongHandler = (title) => {
+    setSongs([...songs, { title, id: getKey() }])
   }
   const [songs, setSongs] = useState(initState)
   return (
@@ -20,7 +21,7 @@ const SongList = () => {
           )
         })}
       </ul>
-      <button onClick={addSongHandler}>add song</button>
+      <NewSongForm addSongHandler={addSongHandler} />
     </div>
   );
 }
