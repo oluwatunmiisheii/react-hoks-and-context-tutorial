@@ -1,2 +1,2 @@
 # react-hooks-and-context-starter-code
-React Hooks and Context Api starter code
+A repository for react hooks and context API starter code
