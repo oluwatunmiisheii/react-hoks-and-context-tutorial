@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getKey } from './../util/getKey';
 import NewSongForm from './NewSongForm';
 
@@ -8,10 +8,13 @@ const SongList = () => {
     { title: 'memory gospel', id: getKey() },
     { title: 'the wild wilderness', id: getKey() }
   ]
+  const [songs, setSongs] = useState(initState)
   const addSongHandler = (title) => {
     setSongs([...songs, { title, id: getKey() }])
   }
-  const [songs, setSongs] = useState(initState)
+  useEffect(() => {
+    console.log('from useEffect hooks =>>>', songs);
+  }, [songs])
   return (
     <div className="song-list">
       <ul>
